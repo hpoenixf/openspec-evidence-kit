@@ -6,7 +6,6 @@ Make completion claims easier to inspect: connect tasks to recorded checks, gene
 
 Zero runtime dependencies. Requires Node **26.11.1–26.x**; tests and CI use the pinned **26.11.1**. Works with an ordinary local directory; OpenSpec is optional.
 
-
 **Engineering walkthrough:** [Why a Spec Is Not a Completion Claim: the Evidence Kit](https://hpoenixf.github.io/eff-agent-article/en/articles/026-agent-spec-evidence-workflow) ([中文](https://hpoenixf.github.io/eff-agent-article/articles/026-agent-spec-evidence-workflow)). The article explains the original design and the portable CLI's scope; this README and the evidence-format reference define its usage.
 
 ## Try it offline
