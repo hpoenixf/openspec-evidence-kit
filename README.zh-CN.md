@@ -4,6 +4,9 @@
 
 本工具使用 Node 26.11.1–26.x，无运行依赖、数据库或模型调用。克隆后即可运行 README 中的离线示例；示例记录全部是虚构格式演示。
 
+
+**技术文章：** [写了 Spec，为什么还不能说做完了？从工程流程到开源 Evidence Kit](https://hpoenixf.github.io/eff-agent-article/articles/026-agent-spec-evidence-workflow)（[English](https://hpoenixf.github.io/eff-agent-article/en/articles/026-agent-spec-evidence-workflow)）。正文讲清设计来路、开源后的使用方法及验证边界。
+
 ## 接入现有项目
 
 ```sh
