@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "spec-evidence-completion@1",
+  "changeName": "example",
+  "outcome": "passed",
+  "lane": "provider-free",
+  "observedAt": "2026-01-01T00:00:00Z",
+  "revision": "synthetic-example",
+  "checks": [{ "name": "fictional format example", "status": "passed", "artifact": "check.txt" }]
+}

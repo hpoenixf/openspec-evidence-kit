@@ -1,0 +1,38 @@
+name: evidence-driven
+version: 1
+description: A compact workflow connecting proposed behavior, tasks and recorded evidence.
+artifacts:
+  - id: proposal
+    generates: proposal.md
+    description: Problem, scope and observable acceptance
+    template: proposal.md
+    instruction: State the first useful output, its observable acceptance and current non-goals.
+    requires: []
+  - id: specs
+    generates: specs/**/*.md
+    description: Observable behavior deltas
+    template: spec.md
+    instruction: Use OpenSpec ADDED, MODIFIED or REMOVED requirements with observable scenarios.
+    requires: [proposal]
+  - id: evidence
+    generates: evidence.md
+    description: Baselines and actual observations
+    template: evidence.md
+    instruction: Separate intended outcomes from observations. Keep original date, revision and evidence origin. Missing measurements remain unknown.
+    requires: [specs]
+  - id: tasks
+    generates: tasks.md
+    description: Cohesive workstreams with stable labels
+    template: tasks.md
+    instruction: Give tasks stable labels such as 1.1. Record checks when they occur and update task state only when supported.
+    requires: [evidence]
+  - id: verify
+    generates: verify.md
+    description: Evidence-based completion assessment
+    template: verify.md
+    instruction: Cite actual observations and remaining gaps. A generated view is available through spec-evidence verify; it is structural, not semantic or release certification.
+    requires: [tasks]
+apply:
+  requires: [tasks, evidence]
+  tracks: tasks.md
+  instruction: Implement one cohesive workstream at a time, observe the planned test before changing behavior and append actual results to evidence.md. Preserve independent work and report unresolved gaps honestly.
